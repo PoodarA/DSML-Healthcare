@@ -57,3 +57,8 @@ df['age_group'] = pd.cut(df['Age'], bins=[0, 18, 35, 60, 100], labels=['Child', 
 sns.countplot(data=df, x='age_group')
 plt.title("Patients by Age Group")
 plt.show()
+
+sns.boxplot(data=df, x="Gender", y="Billing Amount")
+plt.title("Billing Amount by Gender")
+plt.tight_layout()
+plt.show()
